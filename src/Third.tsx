@@ -2,14 +2,13 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import Button from './components/Button';
 
-
-const HomeScreen = (props: any) => {
+const ThirdScreen = (props: any) => {
     const { navigation } = props;
-
     return (
         <View style={styles.container}>
-            <Text>Home Screen</Text>
-            <Button title='Second' onPress={() => navigation.navigate('Second')} />
+            <Text>Third Screen</Text>
+            <Button title='Go Back' onPress={() => navigation.goBack()} />
+            <Button title='Go Back 2' onPress={() => navigation.pop(2)} />
         </View>
     )
 }
@@ -17,10 +16,7 @@ const HomeScreen = (props: any) => {
 const styles = StyleSheet.create({
     container: {
         padding: 12
-    },
-    button: {
-        paddingVertical: 12
     }
 })
 
-export default HomeScreen;
+export default ThirdScreen;
