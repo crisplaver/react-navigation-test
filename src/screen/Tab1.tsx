@@ -1,14 +1,15 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import Button from './components/Button';
+import Button from '../components/Button';
 
-const SecondScreen = (props: any) => {
+const Tab1Screen = (props: any) => {
     const { navigation } = props;
     return (
         <View style={styles.container}>
-            <Text>Second Screen</Text>
+            <Text>Tab1 Screen</Text>
+            <Button title='Home' onPress={() => navigation.navigate('Home')} />
+            <Button title='Second' onPress={() => navigation.navigate('Second')} />
             <Button title='Third' onPress={() => navigation.navigate('Third')} />
-            <Button title='Go Back' onPress={() => navigation.pop()} />
         </View>
     )
 }
@@ -19,4 +20,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default SecondScreen;
+export default Tab1Screen;

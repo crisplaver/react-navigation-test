@@ -1,20 +1,12 @@
 
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import HomeScreen from './src/Home';
-import SecondScreen from './src/Second';
-import ThirdScreen from './src/Third';
+import { MainStackNavigator } from './src/Navigation';
 
-const Stack = createStackNavigator()
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Second" component={SecondScreen} />
-        <Stack.Screen name="Third" component={ThirdScreen} />
-      </Stack.Navigator>
+      <MainStackNavigator />
     </NavigationContainer>
   );
 };
